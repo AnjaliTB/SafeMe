@@ -1,12 +1,36 @@
-<ion-header>
+<!--<ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+<div class="home">
+<ion-content padding="true">
+  <ion-list>
+    <ion-button expand="block"  (click)="sendSMS()"  round outline>Alert</ion-button>
+    <br>
+    <ion-button expand="block" color="secondary"  routerDirection="forward">Track</ion-button>
+    <br>
+    <ion-button expand="block"  href="/contacts" routerDirection="forward">Settings</ion-button>
+    <br>
+    <ion-button  expand="block" color="secondary" href="/location" routerDirection="forward">Rate Location</ion-button>
+  </ion-list>
+  <button ion-button (click)="launchLocationPage()">Launch</button>
 </ion-content>
+</div>-->
+<ion-header>
+    <ion-toolbar>
+      <ion-title>
+        Ionic Blank
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content padding>
+      <ion-button expand="block"  (click)="sendSMS()"  round outline>Alert</ion-button>
+  
+      <!--<button ion-button (click)="launchLocationPage()">Launch</button>
+      <ion-button expand="block" color="secondary" href="/location" routerDirection="forward">Location</ion-button>-->
+  
+  </ion-content>

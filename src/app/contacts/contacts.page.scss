@@ -1,12 +1,15 @@
-
-.home {
+.settings {
     background: url('../../../www/img/logo.jpg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     width: 80%;
-    height: 254px;
+    height: 246px;
     margin: auto;
     z-index: 2;
     position: relative;
+}
+
+.active-item {
+    border-left: 8px solid var(--ion-color-primary);
 }

@@ -1,5 +1,7 @@
 {
   "name": "safeme",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

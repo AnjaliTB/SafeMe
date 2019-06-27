@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Emergency Contact</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class="addcon">
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+        <ion-input type="text" position="floating" [(ngModel)]="name" placeholder="Name"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-input type="text" position="floating" [(ngModel)]="number" placeholder="Contact number"></ion-input>
+    </ion-item>
+    <br>
+    <ion-button expand="block"  (click)="addcontact()"  round outline>Add</ion-button>
+  </ion-list>
+</ion-content>
+</div>
+<ion-footer>
+    <ion-grid>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+        <ion-col>
+          <ion-button  color="light" href="/home" routerDirection="forward">Home</ion-button>
+        </ion-col>
+        <ion-col></ion-col>
+        <ion-col></ion-col>
+      </ion-grid>
+</ion-footer>
+

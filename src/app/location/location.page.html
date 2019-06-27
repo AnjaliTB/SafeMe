@@ -1,0 +1,53 @@
+<!--<ion-header>
+  <ion-toolbar>
+    <ion-title>Rate Location</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="map-container" data-tap-disabled="true">
+    <ng-map class="map" zoom="14" center="[{{latitude}}, {{longitude}}]" zoom-control="true" scale-control="false" map-type-control="false" street-view-control="false" map-initialized="init(map)">
+        <custom-marker ng-repeat="cm in customMarkers" position="[{{cm.lat}}, {{cm.lng}}]" class="{{cm.class}}">
+          <h3 class="marker-title">{{cm.text}}</h3>
+        </custom-marker>
+    </ng-map>
+  </div>
+  <div class="row geolocation-row">
+      <div class="col col-center">
+        <button class="geolocation-button button button-block button-positive" ng-click="tryGeoLocation()">
+          Try the Geo Location feature!
+        </button>
+      </div>
+    </div>
+</ion-content>-->
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-buttons left>
+            <button ion-button (click)="close()">Cancel</button>
+        </ion-buttons>
+        <ion-buttons right>
+            <button [disabled]="saveDisabled" ion-button (click)="save()">Save</button>
+        </ion-buttons>
+    </ion-navbar>
+
+    <ion-toolbar>
+        <ion-searchbar [(ngModel)]="query" (ionInput)="searchPlace()"></ion-searchbar>
+    </ion-toolbar>
+
+    <ion-list>
+        <ion-item *ngFor="let place of places" (touchstart)="selectPlace(place)">{{place.description}}</ion-item>
+    </ion-list>
+
+</ion-header>
+
+<ion-content>
+
+    <div #pleaseConnect id="please-connect">
+        <p>Please connect to the Internet...</p>
+    </div>
+
+    <div #map id="map">
+        <ion-spinner></ion-spinner>
+    </div>
+
+</ion-content>
